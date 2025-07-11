@@ -1,0 +1,4 @@
+def sort_by_length(words):
+    return ssorted(words, key=len)
+
+print(sort_by_length(["apple", "cat", "banana", "to"]))
