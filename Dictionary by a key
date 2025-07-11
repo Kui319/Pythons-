@@ -1,0 +1,24 @@
+inventory = {}
+
+def add_item(name, quantity):
+    if name in inventory:
+        inventory[name] += quantity
+    else:
+        inventory[name] = quantity
+
+def retrieve_item(name):
+    return inventory.get(name, "Item not found")
+
+def total_quantity():
+    return sum(inventory.values())
+
+# Example usage:
+add_item("Pen", 10)
+add_item("Book", 5)
+add_item("Pen", 2)  # Updates quantity
+
+print(retrieve_item("Pen"))  # Output: 12
+print(retrieve_item("Book")) # Output: 5
+print(retrieve_item("Pencil")) # Output: Item not found
+
+print("Total quantity of all items:", total_quantity())
